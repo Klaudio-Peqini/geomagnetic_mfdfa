@@ -6,7 +6,7 @@ This repository provides a compact, research-oriented framework for
 **multifractal analysis of geomagnetic time series** and their
 **correlation with seismic activity**.
 
-The core objective is to investigate whether multifractal properties of
+The core objective is to investigate whether the multifractal properties of
 geomagnetic field fluctuations exhibit systematic variations before,
 during, or after seismic events.
 
@@ -177,18 +177,18 @@ where: - s is scale - h(q) is generalized Hurst exponent
 
 Mass exponent:
 
-τ(q) = qh(q) - 1
+$τ(q) = qh(q) - 1$
 
 Singularity spectrum:
 
-α = dτ/dq\
-f(α) = qα - τ(q)
+$α = dτ/dq\$
+$f(α) = qα - τ(q)$
 
 Width of spectrum:
 
-Δα = α_max - α_min
+$Δα = α_max - α_min$
 
-A wider Δα implies stronger multifractality.
+A wider $Δα$ implies stronger multifractality.
 
 ------------------------------------------------------------------------
 
