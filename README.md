@@ -171,7 +171,7 @@ The framework generates:
 
 For a time series x(t), MF-DFA computes:
 
-$F_q(s) \~ s\^{h(q)}$
+$F_q(s) \sim s\^{h(q)}$
 
 where: - s is scale - h(q) is generalized Hurst exponent
 
@@ -198,8 +198,8 @@ A wider $Δα$ implies stronger multifractality.
 2.  Align time windows
 3.  Compute MF-DFA for sliding windows
 4.  Track evolution of:
-    -   H(2)
-    -   Δα
+    -   $H(2)$
+    -   $Δα$
 5.  Compare with seismic activity metrics
 6.  Perform surrogate validation
 7.  Interpret physical coupling mechanisms
