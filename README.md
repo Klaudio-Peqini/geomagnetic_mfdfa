@@ -45,9 +45,9 @@ Seismic processes are known to produce:
 
 Both geomagnetic and seismic time series exhibit:
 
--   Non-Gaussian statistics\
--   Long-range correlations\
--   Intermittency\
+-   Non-Gaussian statistics
+-   Long-range correlations
+-   Intermittency
 -   Scaling laws
 
 This repository explores these features through **multifractal
