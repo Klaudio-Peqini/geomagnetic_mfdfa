@@ -58,7 +58,7 @@ formalism**.
 ## Core Questions
 
 1.  Do geomagnetic time series show measurable changes in multifractal
-    spectra prior to earthquakes?
+    spectra before earthquakes?
 2.  Can seismic time clustering be reflected in scaling exponents?
 3.  Are geomagnetic and seismic datasets jointly multifractal?
 4.  Does cross-correlated multifractal analysis (MF-X-DFA) reveal
@@ -171,7 +171,7 @@ The framework generates:
 
 For a time series x(t), MF-DFA computes:
 
-F_q(s) \~ s\^{h(q)}
+$F_q(s) \~ s\^{h(q)}$
 
 where: - s is scale - h(q) is generalized Hurst exponent
 
