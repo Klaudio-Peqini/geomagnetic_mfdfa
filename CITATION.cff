@@ -1,0 +1,34 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software in your research, please cite it using the
+  metadata in this file.
+title: Geomagnetic–Seismic Multifractal Analysis
+type: software
+authors:
+  - family-names: Peqini
+    given-names: Klaudio
+repository-code: "https://github.com/<your-username>/geomag-seismic-multifractal"
+abstract: >-
+  Compact framework for multifractal analysis of geomagnetic time series and
+  cross-correlation with seismic activity (MF-DFA / MF-X-DFA, DCCA, surrogate tests).
+keywords:
+  - geomagnetism
+  - seismology
+  - multifractal
+  - MF-DFA
+  - MF-X-DFA
+  - DCCA
+  - time-series
+  - scaling
+license: "TBD"
+version: 0.1.0
+date-released: "2026-02-11"
+preferred-citation:
+  type: software
+  title: Geomagnetic–Seismic Multifractal Analysis
+  authors:
+    - family-names: Peqini
+      given-names: Klaudio
+  year: 2026
+  version: 0.1.0
+  url: "https://github.com/<your-username>/geomag-seismic-multifractal"
