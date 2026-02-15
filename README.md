@@ -81,9 +81,9 @@ The repository implements:
 
 -   MF-DFA (Multifractal Detrended Fluctuation Analysis)
 -   Structure functions
--   Generalized Hurst exponent H(q)
--   Mass exponent τ(q)
--   Singularity spectrum f(α)
+-   Generalized Hurst exponent $H(q)$
+-   Mass exponent $τ(q)$
+-   Singularity spectrum $f(α)$
 
 ### 3. Cross-Correlation Analysis
 
