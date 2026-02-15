@@ -199,7 +199,7 @@ A wider $Δα$ implies stronger multifractality.
 3.  Compute MF-DFA for sliding windows
 4.  Track evolution of:
     -   $H(2)$
-    -   Δ$α$
+    -   $Δα$
 5.  Compare with seismic activity metrics
 6.  Perform surrogate validation
 7.  Interpret physical coupling mechanisms
