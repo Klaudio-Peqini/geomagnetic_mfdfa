@@ -160,7 +160,7 @@ strain
 The framework generates:
 
 -   Generalized Hurst exponent curves
--   Multifractal spectra f(α)
+-   Multifractal spectra $f(α)$
 -   Time-evolving scaling exponents
 -   Cross-correlation scaling maps
 -   Statistical confidence intervals
