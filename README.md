@@ -139,7 +139,7 @@ The repository implements:
 
 ### Geomagnetic Data
 
--   1 Hz or minute-resolution magnetic field components (X, Y, Z or H, D, Z)
+-   1 Hz or minute-resolution magnetic field components ($X, Y, Z$ or $H, D, Z$)
 -   Local observatory data or INTERMAGNET format
 
 ### Seismic Data
@@ -186,7 +186,7 @@ $f(α) = qα - τ(q)$
 
 Width of spectrum:
 
-$Δα = α_max - α_min$
+$Δα = α_{max} - α_{min}$
 
 A wider $Δα$ implies stronger multifractality.
 
@@ -199,7 +199,7 @@ A wider $Δα$ implies stronger multifractality.
 3.  Compute MF-DFA for sliding windows
 4.  Track evolution of:
     -   $H(2)$
-    -   $Δα$
+    -   Δ$α$
 5.  Compare with seismic activity metrics
 6.  Perform surrogate validation
 7.  Interpret physical coupling mechanisms
