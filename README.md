@@ -255,6 +255,8 @@ All analyses are:
 -   Seismologists
 -   Nonlinear dynamics researchers
 -   Statistical physicists
+-   Time series analysts
+-   Data scientists in general
 
 ------------------------------------------------------------------------
 
