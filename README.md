@@ -141,6 +141,7 @@ The repository implements:
 
 -   1 Hz or minute-resolution magnetic field components ($X, Y, Z$ or $H, D, Z$)
 -   Local observatory data or INTERMAGNET format
+-   Other formats of geomagnetic field data
 
 ### Seismic Data
 
