@@ -102,38 +102,44 @@ The repository implements:
 ------------------------------------------------------------------------
 
 ## Repository Structure (Planned)
-
-    geomag-seismic-multifractal/
-
-    │
-    ├── data/
-    │   ├── geomagnetic/
-    │   └── seismic/
-    │
-    ├── preprocessing/
-    │   ├── filters.py
-    │   ├── segmentation.py
-    │   └── detrending.py
-    │
-    ├── multifractal/
-    │   ├── mfdaf.py
-    │   ├── structure_functions.py
-    │   ├── spectrum.py
-    │   └── cross_mfdfa.py
-    │
-    ├── analysis/
-    │   ├── correlation_analysis.py
-    │   ├── windowed_analysis.py
-    │   └── surrogate_tests.py
-    │
-    ├── notebooks/
-    │   └── exploratory_analysis.ipynb
-    │
-    ├── tests/
-    │
-    ├── requirements.txt
-    └── README.md
-
+```
+geomag-seismic-multifractal/
+├── data/
+│   ├── geomagnetic/
+│   └── seismic/
+│   └── README.md
+├── src/
+│   └── gsmf/
+│       ├── __init__.py
+│       ├── io/
+│       │   ├── geomag.py
+│       │   ├── seismic.py
+│       │   └── time.py
+│       ├── preprocessing/
+│       │   ├── filters.py
+│       │   ├── segmentation.py
+│       │   └── detrending.py
+│       ├── multifractal/
+│       │   ├── mfdfa.py
+│       │   ├── structure_functions.py
+│       │   ├── spectrum.py
+│       │   └── cross_mfdfa.py
+│       ├── analysis/
+│       │   ├── correlation_analysis.py
+│       │   ├── windowed_analysis.py
+│       │   └── surrogate_tests.py
+├── notebooks/
+│   └── exploratory_analysis.ipynb
+├── results/
+│   ├── figures/
+│   └── tables/
+├── tests/
+├── requirements.txt
+├── pyproject.toml   # optional
+├── README.md
+├── CITATION.cff
+└── LICENSE
+```
 ------------------------------------------------------------------------
 
 ## Input Data
