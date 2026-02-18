@@ -211,6 +211,7 @@ A wider $Δα$ implies stronger multifractality.
 5.  Compare with seismic activity metrics
 6.  Perform surrogate validation
 7.  Interpret physical coupling mechanisms
+8.  Draw meaningful and physically based conclusions
 
 ------------------------------------------------------------------------
 
