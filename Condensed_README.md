@@ -21,6 +21,14 @@ pip install -e .
 
 ---
 
+## Exit from the virtual environment
+
+```bash
+deactivate
+```
+
+---
+
 ## Quick start (your seismic example)
 
 ```python
