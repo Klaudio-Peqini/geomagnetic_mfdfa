@@ -1,4 +1,3 @@
-
 [build-system]
 requires = ["setuptools>=68", "wheel"]
 build-backend = "setuptools.build_meta"
@@ -6,41 +5,24 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "gsmf"
 version = "0.1.0"
-description = "Geomagnetic–Seismic Multifractal Analysis (MF-DFA, MF-X-DFA, DCCA framework)"
+description = "Geomag–Seismic Multifractal analysis toolkit (MFDFA, structure functions, spectrum, cross-MFDFA)."
 readme = "README.md"
-requires-python = ">=3.10"
-license = {text = "MIT"}  # Change if you choose another license
-authors = [
-    {name = "Klaudio Peqini"}
-]
-keywords = [
-    "geomagnetism",
-    "seismology",
-    "multifractal",
-    "MF-DFA",
-    "MF-X-DFA",
-    "DCCA",
-    "time-series",
-    "scaling"
-]
-
+requires-python = ">=3.9"
+license = {text = "MIT"}
+authors = [{name = "Klaudio Peqini"}]
+keywords = ["multifractal", "MFDFA", "geomagnetism", "seismology", "time-series"]
 dependencies = [
-    "numpy>=1.24",
-    "scipy>=1.10",
-    "pandas>=2.0",
-    "matplotlib>=3.7",
-    "tqdm>=4.65"
+  "numpy>=1.22",
+  "pandas>=1.5",
+  "scipy>=1.9",
+  "matplotlib>=3.6",
 ]
 
 [project.optional-dependencies]
-dev = [
-    "pytest>=7.0",
-    "black",
-    "ruff"
-]
-acceleration = [
-    "numba>=0.58"
-]
+dev = ["pytest>=7", "ruff>=0.4", "mypy>=1.5"]
+
+[project.scripts]
+gsmf-quick = "gsmf.__main__:main"
 
 [tool.setuptools]
 package-dir = {"" = "src"}
@@ -50,11 +32,3 @@ where = ["src"]
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]
-addopts = "-ra"
-
-[tool.black]
-line-length = 88
-target-version = ["py310"]
-
-[tool.ruff]
-line-length = 88

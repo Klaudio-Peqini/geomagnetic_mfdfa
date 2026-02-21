@@ -1,281 +1,76 @@
-# Geomagnetic--Seismic Multifractal Analysis
+# geomag-seismic-multifractal
 
-## Overview
+A lightweight, research-friendly Python package to perform **multifractal analysis** (MFDFA, structure functions, spectrum, cross-MFDFA) and **correlation/autocorrelation** analysis on geomagnetic and seismic time series.
 
-This repository provides a compact, research-oriented framework for
-**multifractal analysis of geomagnetic time series** and their
-**correlation with seismic activity**.
+---
 
-The core objective is to investigate whether the multifractal properties of
-geomagnetic field fluctuations exhibit systematic variations before,
-during, or after seismic events.
+## Why `pandas`?
 
-This project is motivated by the hypothesis that:
+Your inputs are CSV time series and event catalogs. **pandas** makes it robust to parse timestamps, resample irregular events into evenly sampled series (counts per hour/day), and align multiple signals on time. Core algorithms are implemented in **numpy**.
 
--   The lithosphere--atmosphere--ionosphere system may exhibit
-    **scale-invariant signatures**
--   Seismic processes may induce **changes in intermittency, long-range
-    correlations, or singularity spectra**
--   Multifractal measures may reveal subtle precursory dynamics not
-    visible in standard spectral analysis
+---
 
-The package is designed to remain:
+## Install
 
--   Compact
--   Reproducible
--   Modular
--   Physically interpretable
--   Robust
-
-------------------------------------------------------------------------
-
-## Scientific Motivation
-
-The geomagnetic field is a complex signal influenced by:
-
--   Core dynamo processes
--   Ionospheric currents
--   Solar--terrestrial interactions
--   Lithospheric electromagnetic disturbances
-
-Seismic processes are known to produce:
-
--   Electromagnetic emissions
--   ULF magnetic anomalies
--   Perturbations in ionospheric conductivity
-
-Both geomagnetic and seismic time series exhibit:
-
--   Non-Gaussian statistics
--   Long-range correlations
--   Intermittency
--   Scaling laws
-
-This repository explores these features through **multifractal
-formalism**.
-
-------------------------------------------------------------------------
-
-## Core Questions
-
-1.  Do geomagnetic time series show measurable changes in multifractal
-    spectra before earthquakes?
-2.  Can seismic time clustering be reflected in scaling exponents?
-3.  Are geomagnetic and seismic datasets jointly multifractal?
-4.  Does cross-correlated multifractal analysis (MF-X-DFA) reveal
-    coupling?
-
-------------------------------------------------------------------------
-
-## Methodological Framework
-
-The repository implements:
-
-### 1. Preprocessing
-
--   Detrending
--   Filtering (ULF bands if needed)
--   Window segmentation
--   Stationarity checks
-
-### 2. Multifractal Analysis
-
--   MF-DFA (Multifractal Detrended Fluctuation Analysis)
--   Structure functions
--   Generalized Hurst exponent $H(q)$
--   Mass exponent $τ(q)$
--   Singularity spectrum $f(α)$
-
-### 3. Cross-Correlation Analysis
-
--   DCCA
--   MF-X-DFA
--   Time-lagged correlation structure
--   Joint scaling behavior
-
-### 4. Statistical Validation
-
--   Surrogate testing
--   Shuffling tests
--   Significance assessment
-
-------------------------------------------------------------------------
-
-## Repository Structure (Planned)
-```
-geomag-seismic-multifractal/
-├── data/
-│   ├── geomagnetic/
-│   └── seismic/
-│   └── README.md
-├── src/
-│   └── gsmf/
-│       ├── __init__.py
-│       ├── io/
-│       │   ├── geomag.py
-│       │   ├── seismic.py
-│       │   └── time.py
-│       ├── preprocessing/
-│       │   ├── filters.py
-│       │   ├── segmentation.py
-│       │   └── detrending.py
-│       ├── multifractal/
-│       │   ├── mfdfa.py
-│       │   ├── structure_functions.py
-│       │   ├── spectrum.py
-│       │   └── cross_mfdfa.py
-│       ├── analysis/
-│       │   ├── correlation_analysis.py
-│       │   ├── windowed_analysis.py
-│       │   └── surrogate_tests.py
-├── notebooks/
-│   └── exploratory_analysis.ipynb
-├── results/
-│   ├── figures/
-│   └── tables/
-├── tests/
-├── requirements.txt
-├── pyproject.toml   # optional
-├── README.md
-├── CITATION.cff
-└── LICENSE
-```
-------------------------------------------------------------------------
-
-## Input Data
-
-### Geomagnetic Data
-
--   1 Hz or minute-resolution magnetic field components ($X, Y, Z$ or $H, D, Z$)
--   Local observatory data or INTERMAGNET format
--   Other formats of geomagnetic field data
-
-### Seismic Data
-
--   Earthquake catalog
-    -   Origin time
-    -   Magnitude
-    -   Depth
-    -   Location
-
-Optional: - Seismic energy release time series - Cumulative Benioff
-strain
-
-------------------------------------------------------------------------
-
-## Outputs
-
-The framework generates:
-
--   Generalized Hurst exponent curves
--   Multifractal spectra $f(α)$
--   Time-evolving scaling exponents
--   Cross-correlation scaling maps
--   Statistical confidence intervals
-
-------------------------------------------------------------------------
-
-## Theoretical Background (Compact)
-
-For a time series x(t), MF-DFA computes:
-
-$F_q(s) \sim s\^{h(q)}$
-
-where: - s is scale - h(q) is generalized Hurst exponent
-
-Mass exponent:
-
-$τ(q) = qh(q) - 1$
-
-Singularity spectrum:
-
-$α = dτ/dq\$
-$f(α) = qα - τ(q)$
-
-Width of spectrum:
-
-$Δα = α_{max} - α_{min}$
-
-A wider $Δα$ implies stronger multifractality.
-
-------------------------------------------------------------------------
-
-## Research Workflow
-
-1.  Load geomagnetic and seismic datasets
-2.  Align time windows
-3.  Compute MF-DFA for sliding windows
-4.  Track evolution of:
-    -   $H(2)$
-    -   $Δα$
-5.  Compare with seismic activity metrics
-6.  Perform surrogate validation
-7.  Interpret physical coupling mechanisms
-8.  Draw meaningful and physically based conclusions
-
-------------------------------------------------------------------------
-
-## Installation
-
-``` bash
-git clone https://github.com/<your-username>/geomag-seismic-multifractal.git
-cd geomag-seismic-multifractal
-pip install -r requirements.txt
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -U pip
+pip install -e .
 ```
 
-------------------------------------------------------------------------
+---
 
-## Dependencies
+## Quick start (your seismic example)
 
--   numpy
--   scipy
--   matplotlib
--   pandas
--   numba (optional acceleration)
--   tqdm
+```python
+import numpy as np
+from gsmf.io import load_earthquake_catalog, events_to_counts
+from gsmf.analysis import autocorrelation
+from gsmf.multifractal import mfdfa, legendre_spectrum
 
-------------------------------------------------------------------------
+cat = load_earthquake_catalog("data/seismic/eq_data_earthquake_reviewed_mag4.csv")
+x = events_to_counts(cat, freq="1D").values
 
-## Reproducibility
+acf = autocorrelation(x, max_lag=365, method="fft")
 
-All analyses are:
+scales = np.unique(np.logspace(np.log10(16), np.log10(2048), 20).astype(int))
+res = mfdfa(x, scales=scales, qs=np.linspace(-5,5,21), poly_order=2)
+spec = legendre_spectrum(res.qs, res.hq)
+```
 
--   Deterministic
--   Seed-controlled
--   Designed for HPC compatibility
--   Suitable for batch processing
+---
 
-------------------------------------------------------------------------
+## CLI
 
-## Long-Term Extensions
+```bash
+gsmf-quick --catalog data/seismic/eq_data_earthquake_reviewed_mag4.csv --freq 1D --max-lag 365 --out-prefix results/tables/quick
+```
 
--   GPU acceleration
--   Real-time anomaly detection
--   Integration with geodynamo simulations
--   Coupling with ionospheric TEC data
--   Deep learning comparison with multifractal indicators
+This writes CSV outputs into `results/tables/`.
 
-------------------------------------------------------------------------
+See `data/README.md` for file formats.
 
-## Intended Audience
+---
 
--   Geophysicists
--   Space physics researchers
--   Seismologists
--   Nonlinear dynamics researchers
--   Statistical physicists
--   Time series analysts
--   Data scientists in general
+## Plotting
 
-------------------------------------------------------------------------
+The plotting helpers live in `gsmf.plotting` and use **matplotlib**.
 
-## License
+Example: plot an ACF in a style similar to your figure (purple plus markers):
 
-To be defined.
+```python
+import matplotlib.pyplot as plt
+from gsmf.analysis import autocorrelation
+from gsmf.plotting import plot_acf
 
-------------------------------------------------------------------------
+acf = autocorrelation(x, max_lag=18000, method="fft")
+plot_acf(acf, style="m-", marker="+", markersize=4, linewidth=1.0)
+plt.show()
+```
 
-## Author
-
-Klaudio Peqini\
-Physicist \| Geomagnetic Field Modeling \| Nonlinear Dynamics
+Other helpers:
+- `plot_mfdfa_Fq(res)`
+- `plot_hq(res)`
+- `plot_spectrum(spec)`
+- `plot_structure_functions(sf_res)`
