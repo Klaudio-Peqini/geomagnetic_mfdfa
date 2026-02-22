@@ -91,7 +91,7 @@ $τ(q) = qh(q) - 1$
 
 we derive:
 
-$α = dτ/dq$ \
+$α = \frac{dτ}{dq}$ \
 $f(α) = qα - τ(q)$
 
 Key measurable quantities:
