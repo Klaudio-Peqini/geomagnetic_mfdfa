@@ -61,7 +61,7 @@ Decay behavior distinguishes:
 
 Relation to Hurst exponent:
 
-C(τ) ~ τ^(2H - 2)
+$C(τ) \sim τ^(2H - 2)$
 
 ---
 
@@ -69,11 +69,11 @@ C(τ) ~ τ^(2H - 2)
 
 The algorithm computes:
 
-F_q(s)
+$F_q(s)$
 
 and extracts generalized Hurst exponents:
 
-h(q)
+$h(q)$
 
 Special cases:
 
