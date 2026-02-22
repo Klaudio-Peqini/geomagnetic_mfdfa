@@ -50,7 +50,7 @@ This package provides tools to quantify:
 
 The autocorrelation function:
 
-C(τ)
+$C(τ)$
 
 quantifies memory across time lags.
 
@@ -61,7 +61,7 @@ Decay behavior distinguishes:
 
 Relation to Hurst exponent:
 
-$C(τ) \sim τ^(2H - 2)$
+$C(τ) \sim τ^{2(H - 1)}$
 
 ---
 
@@ -77,9 +77,9 @@ $h(q)$
 
 Special cases:
 
-- h(2) → classical Hurst exponent
-- Constant h(q) → monofractal
-- Nonlinear h(q) → multifractal
+- $h(2)$ → classical Hurst exponent
+- Constant $h(q)$ → monofractal
+- Nonlinear $h(q)$ → multifractal
 
 ---
 
@@ -91,13 +91,13 @@ $τ(q) = qh(q) - 1$
 
 we derive:
 
-$α = dτ/dq$
+$α = dτ/dq$ \
 $f(α) = qα - τ(q)$
 
 Key measurable quantities:
 
 - Spectrum width $Δα$ → strength of multifractality
-- Peak location $α₀$ → dominant scaling exponent
+- Peak location $α_0$ → dominant scaling exponent
 - Asymmetry → dominance of large vs small fluctuations
 
 ---
