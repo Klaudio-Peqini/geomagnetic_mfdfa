@@ -87,17 +87,17 @@ Special cases:
 
 From:
 
-τ(q) = qh(q) - 1
+$τ(q) = qh(q) - 1$
 
 we derive:
 
-α = dτ/dq  
-f(α) = qα - τ(q)
+$α = dτ/dq$
+$f(α) = qα - τ(q)$
 
 Key measurable quantities:
 
-- Spectrum width Δα → strength of multifractality
-- Peak location α₀ → dominant scaling exponent
+- Spectrum width $Δα$ → strength of multifractality
+- Peak location $α₀$ → dominant scaling exponent
 - Asymmetry → dominance of large vs small fluctuations
 
 ---
