@@ -61,7 +61,7 @@ Decay behavior distinguishes:
 
 Relation to Hurst exponent:
 
-$C(τ) \sim τ^H$
+$C(τ) \sim τ^{2H - 2}$
 
 ---
 
