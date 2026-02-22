@@ -153,6 +153,7 @@ geomag-seismic-multifractal/
 │   ├── analysis/
 │   └── plotting/
 ├── notebooks/
+├── examples/
 ├── results/
 │   ├── figures/
 │   └── tables/
