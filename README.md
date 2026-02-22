@@ -300,6 +300,10 @@ Distinguish:
 - SOC-like scaling
 - Pre-large-event intermittency
 
+## Examples
+In the folder ```examples```, several Python scripts are shown that compute the relevant quantities and enable drawing meaningful conclusions.
+In the same folder is a mock file. It allows the generation of mock data to apply the various funcitons in the repo.
+
 ---
 
 # Reproducibility & Philosophy
