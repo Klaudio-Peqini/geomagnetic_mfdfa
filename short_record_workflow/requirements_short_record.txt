@@ -1,0 +1,2 @@
+# Optional dependency only needed when reading .xlsx geomagnetic files directly.
+openpyxl>=3.1
