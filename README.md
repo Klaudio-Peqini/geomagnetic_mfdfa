@@ -209,12 +209,6 @@ Example script provided in:
 
 scripts/run_geomag_analysis.py
 
-## Short-record geophysical workflow
-
-You can paste the following section into the main `README.md`, preferably after the existing **Geomagnetic Workflow Example** section or before the seismic CLI examples.
-
----
-
 ## Short-record workflow for radon and geomagnetic/RPI series
 
 For records with only a few thousand samples, the full seismic-style parameter scans should not be used directly. Short radon and geomagnetic/RPI records require conservative scale limits, narrow q-ranges, preprocessing diagnostics, and surrogate-based interpretation.
